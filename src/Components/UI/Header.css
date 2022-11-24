@@ -1,0 +1,48 @@
+.header{
+    background-color: #2874f0;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo{
+    width: 50%;
+}
+.logo-sub{
+    font-style: italic;
+}
+.logo-sub span:nth-child(2){
+color: #ffe500;
+margin: 0 5px;
+}
+.logo-sub img{
+    height: 15px;
+    transform: rotate(10deg);
+}
+.searchInput{
+    width: 30vw;
+    height:50px;
+    padding: 20px;
+    border-radius: 5px;
+    border:1px solid #2874f0;
+}
+.searchIcon{
+    color: #2874f0;
+    position: relative;
+    top: 0;
+    left: -30px;
+}
+button{
+    width: 10vw;
+    height:50px;
+    padding: 10px;
+    color: #2874f0;
+    background-color: white;
+    border-radius: 5px;
+    border:1px solid #2874f0;
+    font-size: large;
+}
+.cart span{
+    font-size:20px;
+}

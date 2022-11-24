@@ -1,0 +1,12 @@
+.menu-header{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.menu-header div{
+    text-align: center;
+}
+.menu-header div img{
+    height: 50%;
+    width: 70%;
+}

@@ -1,0 +1,22 @@
+.cart-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+}
+.cart-container .carts{
+    padding: 30px 30px 0 30px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgb(201, 196, 196);
+}
+.cart-container img{
+    width: 80%;
+    height: 50%;
+}
+.cart-container .carts span:nth-child(4){
+    color: rgb(18, 173, 54);
+}
+.cart-container .carts p:nth-child(5){
+    color: rgb(253, 66, 9);
+}
+
