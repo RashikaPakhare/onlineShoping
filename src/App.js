@@ -1,11 +1,9 @@
 
 import './App.css';
-import Cart from './Components/Content/Cart';
-import Footer from './Components/Footer/Footer';
-import Menu from './Components/Header/Menu';
-import Header from './Components/Header/Header';
-import axios from 'axios';
-import React, {useState, useEffect} from 'react';
+import HomeScreens from './Screens/HomeScreens';
+import ProductDetails from './Screens/ProductDetails';
+import JweleryCat from './Screens/jweleryCat';
+// import Catagory from './Screens/Catagory';
 import {Routes, Route} from 'react-router-dom';
 
 
@@ -74,29 +72,15 @@ function App() {
   // ]
 
 
-  const [cartList, setCartList] = useState([]);
-
-  const baseUrl = "https://fakestoreapi.com/products";
-
-  useEffect(()=>{
-    // fetch('https://fakestoreapi.com/products')
-    //         .then(res=>res.json())
-    //         .then(json=>setCartList(json));}
-            
-
-    axios.get(baseUrl).then((response) =>{
-      setCartList(response.data)
-    })}
-            ,[]);
-// console.log(cartList);
-  return (
-    <div>
-      <Header></Header>
-    <Menu></Menu>
-    <Cart cartItems={cartList}></Cart>
-    <Footer></Footer>
-    </div>
- );
+  
+return (
+  <Routes>
+    <Route  path='/' element={<HomeScreens></HomeScreens>}/>
+    <Route path='/products/id' element={<ProductDetails></ProductDetails>}/>
+    <Route path='/products/category/jewelery' element={<JweleryCat></JweleryCat>}/>
+  </Routes>
+  
+);
 }
 
 export default App;

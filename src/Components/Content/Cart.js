@@ -1,5 +1,6 @@
 // import CartDetails from './CartDetails';
 import '../UI/Cart.css'
+import { Link } from 'react-router-dom';
 const Cart = (props)=>{
     
 // console.log(props.cartItems);
@@ -11,6 +12,7 @@ const Cart = (props)=>{
                 <span>$ {item.price} </span>
                 <span>50% off</span>
                 <p>Rating: {item.rating.rate}</p>
+                <Link to={`products/${item.id}`}>view details</Link>
             </div>))}
         </div>
     )
