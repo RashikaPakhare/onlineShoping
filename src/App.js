@@ -4,7 +4,7 @@ import HomeScreens from './Screens/HomeScreens';
 import ProductDetails from './Screens/ProductDetails';
 import JweleryCat from './Screens/jweleryCat';
 // import Catagory from './Screens/Catagory';
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -76,8 +76,8 @@ function App() {
 return (
   <Routes>
     <Route  path='/' element={<HomeScreens></HomeScreens>}/>
-    <Route path='/products/id' element={<ProductDetails></ProductDetails>}/>
-    <Route path='/products/category/jewelery' element={<JweleryCat></JweleryCat>}/>
+    <Route path="/product-details/:id" element={<ProductDetails />} />
+    <Route path='products/catagory/jewelery' element={<JweleryCat></JweleryCat>}/>
   </Routes>
   
 );

@@ -1,30 +1,37 @@
-import { useEffect } from "react";
 import CartDetail from "../Components/Content/CartDetail";
+
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-const ProductDetails = () => {
-    const [product, setProduct] = useState(null);
-    const { id } = useParams();
+function ProductDetails() {
+  const [product, setProduct] = useState(null);
+  const { id } = useParams();
 
-    useEffect(() => {
-        axios({
-            method: "GET",
-            baseURL: "https://fakestoreapi.com",
-            url: `/products/${id}`
-        }).then((response) => {
-            setProduct(response.data)
-        })
-    }
-        , []);
-
-    return (
-        <div>
-            {product && (
-                <CartDetail cartDetails = {product}></CartDetail>
-            )}
-        </div>
-    )
+  useEffect(() => {
+    axios({
+      method: "GET",
+      baseURL: "https://fakestoreapi.com",
+      url: `/products/${id}`,
+    }).then((response) => {
+      setProduct(response.data);
+    });
+  });
+  console.log("product:", product);
+  return (
+      
+    <div className="App">
+      {product && (
+        // <>
+        //   <h1>{product.title}</h1>
+        //   <img src={product.image} alt="" />
+        //   <h4>{product.description}</h4>
+        //   <h3>${product.price}</h3>
+        // </>
+        <CartDetail cartDetails = {product}></CartDetail>
+      )}
+    </div>
+  );
 }
+
 export default ProductDetails;

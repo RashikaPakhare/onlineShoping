@@ -19,13 +19,13 @@ const Header = ()=>{
             </div>
             <div>
                 <input className="searchInput" type="search" placeholder="Search for products, brands and more" id="search"></input>
-                <label className="searchIcon" htmlFor="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <label className="searchIcon" htmlFor="search"><i className="fa-solid fa-magnifying-glass"></i></label>
             </div>
             <div>
                 <button>Login</button>
             </div>
             <div className="cart">
-                <span><i class="fa-solid fa-cart-shopping"></i> Cart</span>
+                <span><i className="fa-solid fa-cart-shopping"></i> Cart</span>
             </div>
         </div>
     );

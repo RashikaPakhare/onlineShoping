@@ -1,4 +1,5 @@
 import axios from 'axios';
+import '../Components/UI/CartDetails.css';
 import Cart from '../Components/Content/Cart';
 import Footer from '../Components/Footer/Footer';
 import Menu from '../Components/Header/Menu';
@@ -27,7 +28,9 @@ const JweleryCat = ()=>{
       <div>
         <Header></Header>
       <Menu></Menu>
+      <div className='body'>
       <Cart cartItems={JweList}></Cart>
+      </div>
       <Footer></Footer>
       </div>
    );
