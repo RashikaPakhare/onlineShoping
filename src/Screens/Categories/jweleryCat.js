@@ -1,9 +1,9 @@
 import axios from 'axios';
-import '../Components/UI/CartDetails.css';
-import Cart from '../Components/Content/Cart';
-import Footer from '../Components/Footer/Footer';
-import Menu from '../Components/Header/Menu';
-import Header from '../Components/Header/Header';
+
+import Cart from '../../Components/Content/Cart';
+import Footer from '../../Components/Footer/Footer';
+import Menu from '../../Components/Header/Menu';
+import Header from '../../Components/Header/Header';
 import React, {useState, useEffect} from 'react';
 // import {Routes, Route} from 'react-router-dom';
 
@@ -23,14 +23,14 @@ const JweleryCat = ()=>{
         setJweList(response.data)
       })}
               ,[]);
-  console.log(JweList);
+  // console.log(JweList);
     return (
       <div>
         <Header></Header>
       <Menu></Menu>
-      <div className='body'>
+    
       <Cart cartItems={JweList}></Cart>
-      </div>
+     
       <Footer></Footer>
       </div>
    );

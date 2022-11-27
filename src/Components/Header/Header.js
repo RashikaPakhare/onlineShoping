@@ -1,6 +1,8 @@
-import "../UI/Header.css"
-
+import "../UI/Header.css";
+import { Link } from "react-router-dom";
 const Header = ()=>{
+
+    
 
     return(
         <div className="header">
@@ -18,7 +20,7 @@ const Header = ()=>{
                 </div>
             </div>
             <div>
-                <input className="searchInput" type="search" placeholder="Search for products, brands and more" id="search"></input>
+                <input className="searchInput" type="search" placeholder="Search by catagories" id="search" onKeyDown={(event)=>{event.key === "Enter" && <Link></Link>}}></input>
                 <label className="searchIcon" htmlFor="search"><i className="fa-solid fa-magnifying-glass"></i></label>
             </div>
             <div>

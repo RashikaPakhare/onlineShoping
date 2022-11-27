@@ -2,9 +2,14 @@
 import './App.css';
 import HomeScreens from './Screens/HomeScreens';
 import ProductDetails from './Screens/ProductDetails';
-import JweleryCat from './Screens/jweleryCat';
+
 // import Catagory from './Screens/Catagory';
 import { Routes, Route } from "react-router-dom";
+import JweleryCat from "./Screens/Categories/jweleryCat";
+import MenCat from "./Screens/Categories/MenCat";
+import ElectCat from "./Screens/Categories/ElectCat";
+import WomenCat from './Screens/Categories/WomenCat';
+
 
 
 function App() {
@@ -78,6 +83,9 @@ return (
     <Route  path='/' element={<HomeScreens></HomeScreens>}/>
     <Route path="/product-details/:id" element={<ProductDetails />} />
     <Route path='products/catagory/jewelery' element={<JweleryCat></JweleryCat>}/>
+    <Route path="products/catagory/men's clothing" element={<MenCat></MenCat>}/>
+    <Route path='products/catagory/electronics' element={<ElectCat></ElectCat>}/>
+    <Route path="products/catagory/women's clothing" element={<WomenCat></WomenCat>} />
   </Routes>
   
 );
