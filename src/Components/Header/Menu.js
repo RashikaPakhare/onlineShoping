@@ -5,8 +5,8 @@ const Menu =()=>{
     return(
         <ul className="menu-header">
         <li>
-            <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"></img>
-            <p>Top Offers</p>
+            <img alt='img...' src="https://img.freepik.com/free-vector/christmas-gifts-background_23-2147703684.jpg?w=740&t=st=1669619284~exp=1669619884~hmac=841472e45efd06920360f053c278b2310da9654c747bad91c26855ff9cbc1294"></img>
+            <Link>Top Offers</Link>
         </li>
         {/* <div>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100"></img>
@@ -17,24 +17,25 @@ const Menu =()=>{
             <LINK to={`catagory/electronics`}>TV Mobiles</LINK>
         </div>*/}
         <li>
-            <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100"></img>
-            <br/><br/><Link to={`products/catagory/men's clothing`}>Men's clothing</Link>
+            <img alt='img...' src="https://img.freepik.com/free-photo/portrait-handsome-businessman_329181-9105.jpg?w=360&t=st=1669619109~exp=1669619709~hmac=ffead6f967e71ba3f2b6e88569987019ca287ef744a1ce6ff1720ea355cd638b"></img>
+           <Link to={`products/catagory/men's clothing`}>Men's clothing</Link>
         </li>
         <li>
-            <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100"></img>
-            <br/><br/>  <Link to={`products/catagory/jewelery`}>Jewelery</Link>
+            <img alt='img...' src="https://img.freepik.com/free-photo/luxurious-golden-ring-with-purple-gemstone_1203-1528.jpg?w=740&t=st=1669619033~exp=1669619633~hmac=07347bbb14bc6d3666cc5a160bcc693cf9cee6635ab63a06013ae8bb44bd20bf"></img>
+            <Link to={`products/catagory/jewelery`}>Jewelery</Link>
         </li>
         <li>
-            <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100"></img>
-            <br/><br/>  <Link to={`products/catagory/women's clothing`}>Women's clothing</Link>
+            <img alt='img...' src="https://img.freepik.com/free-photo/cheerful-traditional-indian-woman-white-background-studio-shot_1157-48206.jpg?w=360&t=st=1669619231~exp=1669619831~hmac=a465aad043928987793dc6b54f03ea1c4d999d17f68589beaa606962d32ece44"></img>
+             <Link to={`products/catagory/women's clothing`}>Women's clothing</Link>
         </li>
         <li>
-            <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100"></img>
-            <br/><br/> <Link to={`products/catagory/electronics`}>Electronics</Link>
+            <img alt='img...' src="https://img.freepik.com/premium-photo/home-appliances-gas-cooker-tv-cinema-refrigerator-air-conditioner-microwave-laptop-washing-machine_252025-693.jpg?w=900"></img>
+          <Link to={`products/catagory/electronics`}>Electronics</Link>
         </li>
         <li>
-        <Link to='/add-product'>Add Product</Link>
+        <Link className='addPrdt' to='/add-product'>Add Product</Link>
         </li>
+        
        {/* <select >
         <option value="asce">
            <Link to='products/asce'>Asce</Link></option>

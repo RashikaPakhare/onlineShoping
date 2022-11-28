@@ -1,8 +1,12 @@
 
 import '../UI/Cart.css'
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+
 const Cart = (props)=>{
-    
+
+
+  
 // console.log(props.cartItems);
     return(
         <div className="cart-container">
@@ -13,13 +17,15 @@ const Cart = (props)=>{
                 <span>50% off</span>
                 <p>Rating: {item.rating.rate}</p>
                 {/* <Link to={`/products/${item.id}`}>view details</Link> */}
-                <Link
+               <div className='cartBtns'> <Link 
                 to={`/product-details/${item.id}`}
-                className="product-card-button"
+              
               >
                 View Details
               </Link>
-            </div>))}
+            
+              <Link to={`/products/${item.id}`}>Delete Product</Link>
+          </div>  </div>))}
         </div>
     )
 

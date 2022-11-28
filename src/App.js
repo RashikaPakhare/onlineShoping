@@ -10,6 +10,7 @@ import MenCat from "./Screens/Categories/MenCat";
 import ElectCat from "./Screens/Categories/ElectCat";
 import WomenCat from './Screens/Categories/WomenCat';
 import AddProducts from './Screens/AddProducts';
+import DeleteProduct from './Screens/DeleteP';
 
 
 function App() {
@@ -80,13 +81,14 @@ function App() {
   
 return (
   <Routes>
-    <Route  path='/' element={<HomeScreens></HomeScreens>}/>
+    <Route  path='/' element={<HomeScreens />}/>
     <Route path="/product-details/:id" element={<ProductDetails />} />
-    <Route path='products/catagory/jewelery' element={<JweleryCat></JweleryCat>}/>
-    <Route path="products/catagory/men's clothing" element={<MenCat></MenCat>}/>
-    <Route path='products/catagory/electronics' element={<ElectCat></ElectCat>}/>
-    <Route path="products/catagory/women's clothing" element={<WomenCat></WomenCat>} />
+    <Route path='products/catagory/jewelery' element={<JweleryCat />}/>
+    <Route path="products/catagory/men's clothing" element={<MenCat />}/>
+    <Route path='products/catagory/electronics' element={<ElectCat />}/>
+    <Route path="products/catagory/women's clothing" element={<WomenCat />} />
     <Route path="/add-product" element={<AddProducts />} />
+    <Route path='/products/:id' element={<DeleteProduct />}/>
   </Routes>
   
 );

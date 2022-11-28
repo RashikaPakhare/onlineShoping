@@ -1,5 +1,5 @@
 import CartDetail from "../Components/Content/CartDetail";
-
+import '../Components/UI/CartDetails.css'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -20,14 +20,9 @@ function ProductDetails() {
   console.log("product:", product);
   return (
       
-    <div className="App">
+    <div>
       {product && (
-        // <>
-        //   <h1>{product.title}</h1>
-        //   <img src={product.image} alt="" />
-        //   <h4>{product.description}</h4>
-        //   <h3>${product.price}</h3>
-        // </>
+        
         <CartDetail cartDetails = {product}></CartDetail>
       )}
     </div>

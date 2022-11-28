@@ -24,15 +24,14 @@ margin: 0 5px;
     width: 30vw;
     height:50px;
     padding: 20px;
-    border-radius: 5px;
     border:1px solid #2874f0;
 }
 .searchIcon{
     color: #2874f0;
     position: relative;
     top: 0;
-    left: -30px;
-    margin: 0 10px;
+    left: -40px;
+    margin:10px;
 }
 .button{
     width: 10vw;
@@ -40,7 +39,6 @@ margin: 0 5px;
     padding: 10px;
     color: #2874f0;
     background-color: white;
-    border-radius: 5px;
     border:1px solid #2874f0;
     font-size: large;
 }

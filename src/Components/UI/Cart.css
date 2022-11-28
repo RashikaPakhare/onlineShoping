@@ -2,12 +2,12 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    
 }
 .cart-container .carts{
     padding: 30px 30px 0 30px;
-    border-radius: 10px;
     margin: 20px;
-    box-shadow: 0 0 10px rgb(201, 196, 196);
+    box-shadow: 0 0 10px rgb(31, 143, 235);
 }
 .cart-container img{
     width: 80%;
@@ -21,3 +21,13 @@
     color: rgb(253, 66, 9);
 }
 
+.cartBtns a{
+    text-decoration: none;
+    color: white;
+    background-color: #2874f0 ;
+    font-weight: 500;
+    padding: 10px;
+}
+.cartBtns a:nth-child(1){
+    margin-right: 10px;
+}

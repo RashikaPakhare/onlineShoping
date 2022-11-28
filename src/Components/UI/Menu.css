@@ -3,10 +3,34 @@
     justify-content: center;
     justify-items: center;
 }
-.menu-header div{
+.menu-header li {
+   list-style: none;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    margin: 20px;
 }
-.menu-header div img{
-    height: 50%;
-    width: 70%;
+.menu-header li img{
+width: 120px;
+height: 120px;
+}
+li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.addPrdt{
+    
+    margin-top: 30%;   
+    text-align: center;
+    border: none;
+    background-color: #2874f0;
+    padding: 15px;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.addPrdt:hover{
+    transform: scale(1.1);
+    color: white;
 }
