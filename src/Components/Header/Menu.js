@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Menu =()=>{
     return(
-        <div className="menu-header">
-        <div>
+        <ul className="menu-header">
+        <li>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"></img>
             <p>Top Offers</p>
-        </div>
+        </li>
         {/* <div>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100"></img>
             <p>Grocery</p>
@@ -16,22 +16,31 @@ const Menu =()=>{
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100"></img>
             <LINK to={`catagory/electronics`}>TV Mobiles</LINK>
         </div>*/}
-        <div>
+        <li>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100"></img>
             <br/><br/><Link to={`products/catagory/men's clothing`}>Men's clothing</Link>
-        </div>
-        <div>
+        </li>
+        <li>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100"></img>
             <br/><br/>  <Link to={`products/catagory/jewelery`}>Jewelery</Link>
-        </div>
-        <div>
+        </li>
+        <li>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100"></img>
             <br/><br/>  <Link to={`products/catagory/women's clothing`}>Women's clothing</Link>
-        </div>
-        <div>
+        </li>
+        <li>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100"></img>
             <br/><br/> <Link to={`products/catagory/electronics`}>Electronics</Link>
-        </div>
+        </li>
+        <li>
+        <Link to='/add-product'>Add Product</Link>
+        </li>
+       {/* <select >
+        <option value="asce">
+           <Link to='products/asce'>Asce</Link></option>
+           <option value="dsce">
+           <Link to='products/dsce'>dsce</Link></option>
+       </select> */}
         {/* <div>
             <img alt='img...' src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100"></img>
             <p>Home</p>
@@ -49,7 +58,7 @@ const Menu =()=>{
             <img alt='img...' src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100"></img>
             <p>2-Wheelers</p>
         </div> */}
-        </div>
+        </ul>
     );
 
 }

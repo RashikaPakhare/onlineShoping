@@ -9,7 +9,7 @@ import JweleryCat from "./Screens/Categories/jweleryCat";
 import MenCat from "./Screens/Categories/MenCat";
 import ElectCat from "./Screens/Categories/ElectCat";
 import WomenCat from './Screens/Categories/WomenCat';
-
+import AddProducts from './Screens/AddProducts';
 
 
 function App() {
@@ -86,6 +86,7 @@ return (
     <Route path="products/catagory/men's clothing" element={<MenCat></MenCat>}/>
     <Route path='products/catagory/electronics' element={<ElectCat></ElectCat>}/>
     <Route path="products/catagory/women's clothing" element={<WomenCat></WomenCat>} />
+    <Route path="/add-product" element={<AddProducts />} />
   </Routes>
   
 );

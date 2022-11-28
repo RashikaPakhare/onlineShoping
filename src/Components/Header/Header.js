@@ -24,11 +24,12 @@ const Header = ()=>{
                 <label className="searchIcon" htmlFor="search"><i className="fa-solid fa-magnifying-glass"></i></label>
             </div>
             <div>
-                <button>Login</button>
+                <button className="button">Login</button>
             </div>
             <div className="cart">
                 <span><i className="fa-solid fa-cart-shopping"></i> Cart</span>
             </div>
+            
         </div>
     );
 
