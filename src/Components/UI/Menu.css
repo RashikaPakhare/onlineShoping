@@ -34,3 +34,8 @@ li a{
     transform: scale(1.1);
     color: white;
 }
+@media screen and (min-width:481px) and (max-width:1028px) {
+    .menu-header{
+        display: none;
+    }
+}

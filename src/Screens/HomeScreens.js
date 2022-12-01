@@ -4,12 +4,17 @@ import Footer from '../Components/Footer/Footer';
 import Menu from '../Components/Header/Menu';
 import Header from '../Components/Header/Header';
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
-// import {Routes, Route} from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { productsReceived } from '../redux/productAll';
 
 const HomeScreens = ()=>{
 
-    const [cartList, setCartList] = useState([]);
+  const productState = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+  console.log(productState.products);
+
+    // const [cartList, setCartList] = useState([]);
 
     const baseUrl = "https://fakestoreapi.com/products";
   
@@ -20,7 +25,8 @@ const HomeScreens = ()=>{
               
   
       axios.get(baseUrl).then((response) =>{
-        setCartList(response.data)
+        // setCartList(response.data)
+        dispatch(productsReceived(response.data))
       })}
               ,[]);
   // console.log(cartList);
@@ -28,7 +34,7 @@ const HomeScreens = ()=>{
       <div>
         <Header></Header>
       <Menu></Menu>
-      <Cart cartItems={cartList}></Cart>
+      <Cart cartItems={productState.products}></Cart>
       <Footer></Footer>
       </div>
    );
