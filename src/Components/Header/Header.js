@@ -34,7 +34,7 @@ const Header = ()=>{
             </div>
             <div>
 
-            <i class="fa-solid fa-rectangle-list navbar"></i>
+            <i className="fa-solid fa-rectangle-list navbar"></i>
             </div>
             </div>
 
@@ -54,7 +54,7 @@ const Header = ()=>{
                     </img>
                 </div>
             </div>
-                <i class="colse fa-solid fa-xmark"></i>
+                <i className="colse fa-solid fa-xmark"></i>
                 </div>
                 <div>
                 <ul className="mobile-nav">

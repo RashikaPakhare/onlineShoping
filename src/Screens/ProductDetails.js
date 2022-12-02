@@ -1,29 +1,36 @@
 import CartDetail from "../Components/Content/CartDetail";
 import '../Components/UI/CartDetails.css'
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import {useSelector, useDispatch} from 'react-redux';
+import { productsDetailsReceived } from '../redux/productAll';
 
-function ProductDetails() {
-  const [product, setProduct] = useState(null);
+const ProductDetails = ()=>{
+  // const [product, setProduct] = useState(null);
+ 
+  const productsDetails = useSelector((state) => state.products.productDetails);
+  const dispatch = useDispatch();
+ 
+
+  // console.log(productDetails.products.productDetails);
   const { id } = useParams();
 
   useEffect(() => {
-    axios({
-      method: "GET",
-      baseURL: "https://fakestoreapi.com",
-      url: `/products/${id}`,
-    }).then((response) => {
-      setProduct(response.data);
+    axios.get(`https://fakestoreapi.com/products/${id}`,
+    ).then((response) => {
+      // setProduct(response.data);
+      dispatch(productsDetailsReceived(response.date));
+  console.log("details", response.data);
     });
   });
-  console.log("product:", product);
+  console.log("product:", productsDetails);
   return (
       
     <div>
-      {product && (
+      {productsDetails && (
         
-        <CartDetail cartDetails = {product}></CartDetail>
+        <CartDetail cartDetails = {productsDetails}></CartDetail>
       )}
     </div>
   );
