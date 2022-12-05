@@ -17,7 +17,7 @@ const DeleteProduct = ()=>{
         setProduct(response.data);
       });
     }, []);
-    console.log("product:", product);
+    // console.log("product:", product);
     return (
         
       <div className="body">

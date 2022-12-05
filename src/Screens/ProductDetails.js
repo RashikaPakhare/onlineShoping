@@ -1,8 +1,9 @@
 import CartDetail from "../Components/Content/CartDetail";
 import '../Components/UI/CartDetails.css'
-import React, { useEffect} from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Spinner from 'react-bootstrap/Spinner';
 import {useSelector, useDispatch} from 'react-redux';
 import { productsDetailsReceived } from '../redux/productAll';
 
@@ -11,6 +12,7 @@ const ProductDetails = ()=>{
  
   const productsDetails = useSelector((state) => state.products.productDetails);
   const dispatch = useDispatch();
+  const [loading, setLoad] = useState(true);
  
 
   // console.log(productDetails.products.productDetails);
@@ -20,17 +22,19 @@ const ProductDetails = ()=>{
     axios.get(`https://fakestoreapi.com/products/${id}`,
     ).then((response) => {
       // setProduct(response.data);
-      dispatch(productsDetailsReceived(response.date));
-  console.log("details", response.data);
+      setLoad(false);
+      dispatch(productsDetailsReceived(response.data));
+  // console.log("details", response.data);
     });
   });
-  console.log("product:", productsDetails);
+
   return (
       
     <div>
-      {productsDetails && (
-        
-        <CartDetail cartDetails = {productsDetails}></CartDetail>
+      {loading ? <div className="d-flex justify-content-center">  <Spinner variant="primary" animation="border" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </Spinner> </div> : (productsDetails && (
+        <CartDetail cartDetails = {productsDetails}></CartDetail>)
       )}
     </div>
   );

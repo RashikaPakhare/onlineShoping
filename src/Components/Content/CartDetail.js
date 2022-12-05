@@ -12,7 +12,7 @@ const CartDetail = (props) =>{
 <p>{details.title}</p>
 <p>{details.description}</p>
 <p>$ {details.price}</p>
-<p>Rating: {details.rating.rate}</p>
+{/* <p>Rating: {details.rating.rate}</p> */}
 <button className='cartBtn'> <i className="fa-solid fa-bolt-lightning"> </i> Buy Now</button>
 
             </div>

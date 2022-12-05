@@ -14,12 +14,17 @@ export const productSlice = createSlice({
             // console.log(state, action);
         },
         productsDetailsReceived : (state, action) =>{
-            console.log("payload:", action.payload);
+            // console.log("payload:", action.payload);
             state.productDetails = action.payload;
+        },
+        addProduct : (state, action) =>{
+            state.productDetails = action.payload;
+            state.products = [...state.products, action.payload];
+            console.log("payload:", state.products);
         },
     },
 });
 
-export const { productsReceived, productsDetailsReceived } = productSlice.actions;
+export const { productsReceived, productsDetailsReceived, addProduct } = productSlice.actions;
 
 export default productSlice.reducer;

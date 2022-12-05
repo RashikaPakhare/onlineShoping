@@ -3,14 +3,21 @@ import '../Components/UI/AddProducts.css';
 import {Form, Button } from 'react-bootstrap';
 import React, { useState } from "react";
 import axios from "axios";
+import {addProduct} from '../redux/productAll';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 
 function AddProducts() {
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
   
   const [data, setData] = useState({
     title: "",
     description: "",
     price: "",
     image: null,
+    rating:{rate: ""}
   });
   
 const formValidation = (items)=>{
@@ -26,8 +33,8 @@ const formValidation = (items)=>{
       url: `/products`,
       data: data,
     }).then((response) => {
-      console.log("response:", response.data);
-     
+      dispatch(addProduct(response.data));
+      navigate('/');
       formValidation(response.data);
 
 
@@ -81,6 +88,17 @@ const formValidation = (items)=>{
             }}
           />
         </Form.Group>
+        {/* <Form.Group className="mb-5 col-12">
+          <Form.Label>Rating</Form.Label>
+          <Form.Control placeholder="Enter Rating"
+            type="number"
+            value={data.rating.rate}
+            onChange={(e) => {
+              setData({ ...data, rating[rate]: e.target.value });
+            }}
+          />
+        </Form.Group> */}
+
         <Form.Group className="mb-5 col-12" >
           <Form.Label>Image</Form.Label>
           <Form.Control 
