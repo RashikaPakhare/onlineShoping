@@ -3,6 +3,7 @@ import Cart from '../Components/Content/Cart';
 
 import axios from 'axios';
 import React, {useEffect} from 'react';
+import MultipleItems from '../Components/Content/slider';
 import { useSelector, useDispatch } from 'react-redux';
 import { productsReceived } from '../redux/productAll';
 
@@ -25,12 +26,15 @@ const HomeScreens = ()=>{
       axios.get(baseUrl).then((response) =>{
         // setCartList(response.data)
         dispatch(productsReceived(response.data))
-      })}
-              );
+      })
+    },[]);
   // console.log(cartList);
+
+  const theme = localStorage.getItem("theme");
+  
     return (
-      <div>
-    
+      <div className={`${theme === 'light'? 'light' : 'dark'} `}>
+        <MultipleItems></MultipleItems>
       <Cart cartItems={productState.products}></Cart>
 
       </div>

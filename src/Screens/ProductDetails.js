@@ -25,8 +25,8 @@ const ProductDetails = ()=>{
       setLoad(false);
       dispatch(productsDetailsReceived(response.data));
   // console.log("details", response.data);
-    });
-  });
+    }).catch(console.log("network error"));
+  }, []);
 
   return (
       

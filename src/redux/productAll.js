@@ -6,6 +6,7 @@ export const productSlice = createSlice({
     initialState:{
         products :[],
         productDetails :null,
+        category : [],
     },
     //reducer fuction
     reducers: {
@@ -22,9 +23,12 @@ export const productSlice = createSlice({
             state.products = [...state.products, action.payload];
             console.log("payload:", state.products);
         },
+        categoryProductsReceuived : (state, action) =>{
+            state.category = action.payload;   
+        },
     },
 });
 
-export const { productsReceived, productsDetailsReceived, addProduct } = productSlice.actions;
+export const { productsReceived, productsDetailsReceived, addProduct, categoryProductsReceuived } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -36,9 +36,7 @@ const formValidation = (items)=>{
       dispatch(addProduct(response.data));
       navigate('/');
       formValidation(response.data);
-
-
-    });
+ }).catch(console.log("network error"));
 
 
 

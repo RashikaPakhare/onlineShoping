@@ -1,8 +1,11 @@
 import "../UI/Header.css";
 import { Link } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
+
 const Header = ()=>{
 
-    
+    const theme = localStorage.getItem("theme");
+    console.log(theme);
 
     return(
         <div >
@@ -32,6 +35,32 @@ const Header = ()=>{
                 <span ><i className="fa-solid fa-cart-shopping"></i> Cart</span>
         
             </div>
+            <Form>
+      <Form.Check
+      onClick={(e) => {
+        (theme === "light" || theme === null)?
+         localStorage.setItem("theme", "dark"):
+         localStorage.setItem("theme", "light");
+       window.location.reload();
+     } }
+        type="switch"
+        id="custom-switch"
+        label="Dark theme is here"
+      />
+                
+            {/* <button className="button"
+        onClick={(e) => {
+           (theme === "light" || theme === null)?
+            localStorage.setItem("theme", "dark"):
+            localStorage.setItem("theme", "light");
+          
+          
+          window.location.reload();
+        }}
+      >
+        Toggle Theme
+      </button> */}
+      </Form>
             <div>
 
             <i className="fa-solid fa-rectangle-list navbar"></i>
@@ -56,6 +85,9 @@ const Header = ()=>{
             </div>
                 <i className="colse fa-solid fa-xmark"></i>
                 </div>
+
+
+                
                 <div>
                 <ul className="mobile-nav">
         <li>
