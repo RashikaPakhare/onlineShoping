@@ -1,4 +1,5 @@
 import "../UI/Header.css";
+import {useState} from "react";
 import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 
@@ -6,6 +7,8 @@ const Header = ()=>{
 
     const theme = localStorage.getItem("theme");
     console.log(theme);
+    const [check, setCheck] = useState(false);
+
 
     return(
         <div >
@@ -42,10 +45,12 @@ const Header = ()=>{
          localStorage.setItem("theme", "dark"):
          localStorage.setItem("theme", "light");
        window.location.reload();
+       setCheck(!check)
      } }
         type="switch"
         id="custom-switch"
         label="Dark theme is here"
+        checked={!check}
       />
                 
             {/* <button className="button"

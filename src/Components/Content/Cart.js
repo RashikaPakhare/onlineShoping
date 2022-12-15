@@ -28,6 +28,7 @@ const Cart = (props)=>{
               </Link> */}
             
               <Link to={`/products/${item.id}`}>Delete Product</Link>
+              <button onClick={(e) =>{navigate('/edit-product', {state: item})}}>Edit Product</button>
           </div>  </div>))}
         </div>
     )

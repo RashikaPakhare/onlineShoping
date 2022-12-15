@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import AddProducts from './Screens/AddProducts';
 import DeleteProduct from './Screens/DeleteP';
 import Catagory from './Screens/Catagory';
+import EditProduct from './Screens/EditProduct';
 
 
 function App() {
@@ -89,6 +90,7 @@ return (
     <Route path="/add-product" element={<AddProducts />} />
     <Route path='/products/:id' element={<DeleteProduct />}/>
     <Route path='products/catagory/:catagories' element={<Catagory />} />
+    <Route path='/edit-product' element={<EditProduct />} />
   </Routes>
   <Footer></Footer>
   </div>
